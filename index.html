@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <style>
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(52, 52, 52);
+            font-family: Arial, sans-serif;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0; 
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        nav a:hover {
+            color: blue; 
+            text-decoration: underline;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .about-me {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-me h2 {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: maroon;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-me p{
+            font-weight: bolder;
+            color: slategray;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgb(52, 52, 52);
+            padding: 10px;
+            text-align: center;
+            position: absolute; 
+            width: 100%; 
+            bottom: 0;
+            position: relative;
+        }
+
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-links a {
+            margin: 0 10px;
+            text-align: center;
+            position: relative; 
+        }
+
+        
+        .social-media-links img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        
+        .social-media-links figcaption {
+            font-size: 12px;
+            margin-top: 5px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            opacity: 0; 
+            transform: translateY(-10px); 
+            transition: opacity 0.3s, transform 0.3s;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .social-media-links figure {
+           position: relative;
+           margin: 0 10px;
+           text-align: center;
+        }
+
+        .social-media-links a:hover figcaption {
+            opacity: 1; 
+            transform: translateY(-30px); 
+            transition: opacity 0.3s, transform 0.3s;
+            bottom: 0;
+        }
+
+        .portfolio {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: maroon;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            grid-column: span 2;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .project-description {
+            color: slategray;
+            font-weight: bolder;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <div class="border-box">
+                <h2>About Me</h2>
+                <p><em>"I'm a dedicated web developer who appreciates simple, effective design.
+                    I'm on a journey to turn concepts into intuitive websites and web applications.
+                    I aim to make responsive and dynamic digital experiences with a keen eye for detail.
+                    I'm committed to developing effective and aesthetically pleasing solutions and
+                    am constantly investigating the newest technologies. Let's work together to 
+                    make your digital vision a reality.My passion is developing products that not
+                    only perform flawlessly but also look beautiful. I'm constantly immersed in
+                    exploring and implementing the newest technologies in order to stay on
+                    the cutting edge of the constantly changing tech landscape. I firmly believe
+                    that working together will enable us to accomplish great things, and I can't
+                    wait to work with you to make your digital vision a vibrant, flourishing reality.
+                    Please feel free to change this text to suit your preferences or needs.</em>
+                    </p>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <div class="image-container">
+                <img src="about.webp" alt="Your Image">
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <div class="project-description">
+                    <h3>Project 1: Website Redesign for XYZ Company</h3>
+    <p><strong>Description:</strong> Led a team of designers and developers in revamping XYZ Company's outdated website to improve user experience and increase engagement. The project involved a complete overhaul of the site's design, content structure, and back-end functionality.</p>
+    <p><strong>Date:</strong> January 2022 - May 2022</p>
+    <p><strong>Key Achievements:</strong></p>
+    <ul>
+        &nbsp;<li>Increased user engagement by 40% within the first month after the website's relaunch.</li>
+        &nbsp;<li>Improved website load times by optimizing code and implementing content delivery networks.</li>
+        &nbsp;<li>Collaborated with the marketing team to integrate SEO best practices, resulting in a 30% increase in organic traffic.</li>
+    </ul>
+    <p><strong>Samples:</strong></p>
+    <ul>
+        &nbsp;&nbsp;<li>Link to the live website: <a href="https://www.wix.com/blog/best-portfolio-websites#viewer-b94g0">Website Link</a></li>
+        &nbsp;&nbsp;<li>Before and after screenshots showcasing the design transformation.</li>
+    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="pexels-fauxels-3184635 (1).jpg" alt="Project 1">
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="social-media-links">
+            <figure>
+                <a href="https://www.facebook.com/virat.kohli/posts/60b8fec8/478818623610570/" target="_blank"><img src="facebook.jpg" alt="Facebook"></a>
+                <figcaption>Facebook</figcaption>
+            </figure>
+            <figure>
+                <a href="https://twitter.com/imVkohli?s=20" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <figcaption>Twitter</figcaption>
+            </figure>
+            <figure>
+                <a href="https://www.instagram.com/virat.kohli/?hl=en" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
+                <figcaption>Instagram</figcaption>
+            </figure>
+        </div>
+    </footer>
+    
+</body>
+</html>
